@@ -1,0 +1,283 @@
+
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
+
+local Window = Library:CreateWindow(
+    'SkyHub', 
+    'Refinery Caves', 
+    'Visual UI Library', 
+    'rbxassetid://10618928818', 
+    false,
+    'VisualUIConfigs', 
+    'Default')
+
+local Tab = Window:CreateTab('Teleports 1', true, 'rbxassetid://3926305904', Vector2.new(484, 44), Vector2.new(36, 36))
+        
+local Section = Tab:CreateSection('Teleports')
+
+local Button = Section:CreateButton("Teleport ore to sellary", function()
+            local findParts = workspace.Grabable:GetChildren();
+            for i,v in pairs(findParts) do
+            local owner = v:FindFirstChild("Owner")
+            if owner and owner.Value == game.Players.LocalPlayer then
+            print(owner)
+            owner.Parent.Part.CFrame = CFrame.new(game:GetService("Workspace").Map.Sellary.Counter.Base.Position) + Vector3.new(math.random(-8,8),owner.Parent.Part.Size.Y/2,math.random(-8,8))
+            end
+            end
+            end)
+        
+local Button = Section:CreateButton("Teleport ore plot 1", function()
+            local findParts = workspace.Grabable:GetChildren();
+            for i,v in pairs(findParts) do
+            local owner = v:FindFirstChild("Owner")
+            if owner and owner.Value == game.Players.LocalPlayer then
+            print(owner)
+            owner.Parent.Part.CFrame = CFrame.new(game:GetService("Workspace").Plots.Plot1.Base.Position) + Vector3.new(math.random(-8,8),owner.Parent.Part.Size.Y/2,math.random(-8,8))
+            end
+            end
+            print("teste")
+            end)
+        
+local Button = Section:CreateButton("Teleport ore plot 2", function()
+            local findParts = workspace.Grabable:GetChildren();
+            for i,v in pairs(findParts) do
+            local owner = v:FindFirstChild("Owner")
+             if owner and owner.Value == game.Players.LocalPlayer then
+            print(owner)
+            owner.Parent.Part.CFrame = CFrame.new(game:GetService("Workspace").Plots.Plot2.Base.Position) + Vector3.new(math.random(-8,8),owner.Parent.Part.Size.Y/2,math.random(-8,8))
+            end
+            end
+            print("teste")
+            end)
+
+local Button = Section:CreateButton("Teleport ore plot 3", function()
+            local findParts = workspace.Grabable:GetChildren();
+            for i,v in pairs(findParts) do
+            local owner = v:FindFirstChild("Owner")
+            if owner and owner.Value == game.Players.LocalPlayer then
+            print(owner)
+            owner.Parent.Part.CFrame = CFrame.new(game:GetService("Workspace").Plots.Plot3.Base.Position) + Vector3.new(math.random(-8,8),owner.Parent.Part.Size.Y/2,math.random(-8,8))
+            end
+            end
+            print("teste")
+            end)
+
+local Button = Section:CreateButton("Teleport ore plot 4", function()
+            local findParts = workspace.Grabable:GetChildren();
+            for i,v in pairs(findParts) do
+            local owner = v:FindFirstChild("Owner")
+            if owner and owner.Value == game.Players.LocalPlayer then
+            print(owner)
+            owner.Parent.Part.CFrame = CFrame.new(game:GetService("Workspace").Plots.Plot4.Base.Position) + Vector3.new(math.random(-8,8),owner.Parent.Part.Size.Y/2,math.random(-8,8))
+            end
+            end
+            print("teste")
+            end)
+        
+local Button = Section:CreateButton("Teleport ore plot 5", function()
+            local findParts = workspace.Grabable:GetChildren();
+            for i,v in pairs(findParts) do
+            local owner = v:FindFirstChild("Owner")
+            if owner and owner.Value == game.Players.LocalPlayer then
+            print(owner)
+            owner.Parent.Part.CFrame = CFrame.new(game:GetService("Workspace").Plots.Plot5.Base.Position) + Vector3.new(math.random(-8,8),owner.Parent.Part.Size.Y/2,math.random(-8,8))
+            end
+            end
+            print("teste")
+            end)
+local Button = Section:CreateButton("Teleport ore plot 6", function()
+            local findParts = workspace.Grabable:GetChildren();
+            for i,v in pairs(findParts) do
+            local owner = v:FindFirstChild("Owner")
+            if owner and owner.Value == game.Players.LocalPlayer then
+            print(owner)
+            owner.Parent.Part.CFrame = CFrame.new(game:GetService("Workspace").Plots.Plot6.Base.Position) + Vector3.new(math.random(-8,8),owner.Parent.Part.Size.Y/2,math.random(-8,8))
+            end
+            end
+            print("teste")
+            end)
+local Button = Section:CreateButton("Teleport to your plot", function()
+            local plots = workspace.Plots:GetChildren()
+            for i,v in pairs(plots) do
+            local owner = v:FindFirstChild("Owner")
+            if owner.Value == game.Players.LocalPlayer then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(owner.Parent.Base.Position) + Vector3.new(0,15,0)
+            end
+            end
+            end)
+
+local Button = Section:CreateButton("Sell Ore", function()
+            game:GetService("Workspace").Map.Sellary.Keeper.IPart.Interact:FireServer()
+            end)
+            print("teste")
+
+local Tab = Window:CreateTab('Teleports 2', true, 'rbxassetid://3926305904', Vector2.new(484, 44), Vector2.new(36, 36))
+
+local Section = Tab:CreateSection('Teleports')
+Button = Section:CreateButton("Purple Caves", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1364, 5.25, -381.250031, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Railway", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-601.390564, 192.25, 1061.37012, 0.793378353, -0, -0.608728826, 0, 1, -0, 0.608728826, 0, 0.793378353)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Height", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(43.9152908, 219.631027, 1314.60144, 0.946403086, -0.193203211, -0.258831531, 0.20001936, 0.979791939, -6.51925802e-08, 0.253601044, -0.0517712533, 0.965922475)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Mountain Top", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(495.726562, 445.250092, 1014.70868, 0.56639421, -0, -0.824134588, 0, 1, -0, 0.824134588, 0, 0.56639421)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Rad2", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-835.830017, 9.10000038, 2779.37988, 0.258864343, -0, -0.965913713, 0, 1, -0, 0.965913713, 0, 0.258864343)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Rad1", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-903.291382, 9.10000038, 2186.64331, 0.258864343, -0, -0.965913713, 0, 1, -0, 0.965913713, 0, 0.258864343)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Furniture Store", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1017.75, 1.25, 727.5, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Emeralds", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(488.009033, 276.75, 228.040039, 0.707134247, -0, -0.707079291, 0, 1, -0, 0.707079291, 0, 0.707134247)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Sun Secret", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(286.571594, 221.977264, 557.571411, 0.382687271, -0, -0.923877954, 0, 1, -0, 0.923877954, 0, 0.382687271)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Electronics shop", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-98.0789185, 241.749969, 1102.84937, 0.923881531, -0, -0.382678568, 0, 1, -0, 0.382678568, 0, 0.923881531)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("High Green", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-428.263458, 85.25, 186.38652, 0.461792529, -0, -0.886987925, 0, 1, -0, 0.886987925, 0, 0.461792529)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Chill", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-617.385315, 126.625, 13.137146, 0.675608397, -0, -0.737260818, 0, 1, -0, 0.737260818, 0, 0.675608397)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Cave", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(680.540771, 4.75, -18.5674953, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Maze", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1120.75, -200.25, 537.750061, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Big Cave", function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1320.25, -195.75, 1033.75, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Sellary", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-466.167969, 3.25, -65.0762787, 0.707134247, -0, -0.707079291, 0, 1, -0, 0.707079291, 0, 0.707134247)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Uitlity", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-960.523499, 1.75000405, -646.740784, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Dealership", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(694.930359, 9.25000381, -1011.90027, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Sun Obby", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(915.943359, 221.977249, 85.8101349, 0.923881531, -0, -0.382678568, 0, 1, -0, 0.382678568, 0, 0.923881531)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("Mountain Top Chair", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(613.17688, 992.500061, 1520.60791, 0.793378353, -0, -0.608728826, 0, 1, -0, 0.608728826, 0, 0.793378353)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("NewCaveEnd", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3165.06543, 19.7499924, 1471.34216, 0.694649816, -0, -0.719348073, 0, 1, -0, 0.719348073, 0, 0.694649816)
+            print("teste")
+            end)
+
+Button = Section:CreateButton("FieryCaves", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2765.3186, -743.483032, 2703.48315, 0.59337467, -0.347519338, -0.726041853, 0.0241261721, 0.90927124, -0.415504247, 0.804564774, 0.229033083, 0.54792285)
+            print("teste")
+            end)
+local Settings = Window:CreateTab('Settings', false, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+local UIFunctions = Settings:CreateSection('UI Functions')
+
+local DestroyButton = UIFunctions:CreateButton('Destroy UI', function()
+            Library:DestroyUI()
+            end)
+
+local ToggleKeybind = UIFunctions:CreateKeybind('Toggle UI', 'RightShift', function()
+            Library:ToggleUI()
+            end)
+
+
+local TransparencySlider = UIFunctions:CreateSlider('Transparency', 0, 100, 0, Color3.fromRGB(0, 125, 255), function(Value)
+            Library:SetTransparency(Value / 100, true)
+            end)
+
+local ConfigSection = Settings:CreateSection('Config')
+
+local ConfigNameString = ''
+
+local ConfigName = ConfigSection:CreateTextbox('Config Name', 'Input', function(Value)
+
+            ConfigNameString = Value
+            end)
+            
+            local SaveConfigButton = ConfigSection:CreateButton('Save Config', function()
+            Library:SaveConfig(ConfigNameString)
+            end)
+            
+            local SelectedConfig = ''
+            local ConfigsDropdown = ConfigSection:CreateDropdown('Configs', Library:GetConfigs(), nil, 0.25, function(Value)
+            SelectedConfig = Value
+            end)
+            
+            local DeleteConfigButton = ConfigSection:CreateButton('Delete Config', function()
+            Library:DeleteConfig(SelectedConfig)
+            end)
+            
+            local LoadConfigButton = ConfigSection:CreateButton('Load Config', function()
+            Library:LoadConfig(SelectedConfig)
+            end)
+            
+            local RefreshConfigsButton = ConfigSection:CreateButton('Refresh', function()
+            ConfigsDropdown:UpdateDropdown(Library:GetConfigs())
+            end)
+            
+local ThemesSection = Settings:CreateSection('Themes')
+            
+local ThemesDropdown = ThemesSection:CreateDropdown('Themes', Library:GetThemes(), nil, 0.25, function(Value)
+            Library:ChangeTheme(Value)
+            end)
+            
+            local ColorSection = Settings:CreateSection('Custom Colors')
+            
+            for Index, CurrentColor in next, Library:ReturnTheme() do
+            ColorSection:CreateColorpicker(Index, CurrentColor, 0.25, function(Color)
+            Library:ChangeColor(Index, Color)
+            end, {true})
+            end
